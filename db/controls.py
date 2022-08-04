@@ -108,7 +108,7 @@ def insert_data(name, des, price, tax):
         # execute the INSERT statement
         cur.execute(sql, (name, des, price, tax))
         # get the generated id back
-        id = cur.fetchone()[0]
+        id = cur.fetchone()
         # commit the changes to the database
         conn.commit()
         # close communication with the database
